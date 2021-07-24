@@ -6,10 +6,6 @@ import torch
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
 import transformers 
 from transformers import BertForSequenceClassification, AutoModelForSequenceClassification, BertTokenizer, AdamW, BertConfig
-import os
-
-#Running the following command to avoid the kernel from crashing 
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 #BertSummaDev
 def BertSummaDev(text):

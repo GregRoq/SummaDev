@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import spacy
+import en_core_web_lg
 import streamlit as st
 import torch
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler

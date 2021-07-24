@@ -1,7 +1,7 @@
+import nltk
+from nltk import sent_tokenize
 import numpy as np
 import pandas as pd
-import spacy
-from spacy import en_core_web_lg
 import streamlit as st
 import torch
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
@@ -12,13 +12,11 @@ from transformers import BertForSequenceClassification, AutoModelForSequenceClas
 def BertSummaDev(text):
     
     #load necessary objects to spit the text in sentences and tokenize on a word level
-    nlp = spacy.load("en_core_web_lg")
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
     BERT_model = BertForSequenceClassification.from_pretrained('Greg1901/BertSummaDev_AFD')
 
     #convert to list of sentences
-    text = nlp(text)
-    sents = list(text.sents)
+    sents = sent_tokenize(text)
     sentences = []
     for i in sents: 
         sentences.append(str(i))

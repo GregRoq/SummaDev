@@ -7,6 +7,7 @@ import torch
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
 import transformers 
 from transformers import BertForSequenceClassification, AutoModelForSequenceClassification, BertTokenizer, AdamW, BertConfig
+nltk.download('punkt')
 
 #BertSummaDev
 def BertSummaDev(text):

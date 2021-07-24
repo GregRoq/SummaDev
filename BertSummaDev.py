@@ -1,4 +1,5 @@
 import nltk
+import nltkmodules
 from nltk import sent_tokenize
 import numpy as np
 import pandas as pd
@@ -7,7 +8,7 @@ import torch
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
 import transformers 
 from transformers import BertForSequenceClassification, AutoModelForSequenceClassification, BertTokenizer, AdamW, BertConfig
-nltk.download('punkt')
+#nltk.download('punkt')
 
 #BertSummaDev
 def BertSummaDev(text):

@@ -131,8 +131,8 @@ def BertSummaDev(text):
 def main():
     #Setting the layout 
     st.title ('Welcome to SummaDev, a summarising interface tool for development papers.')
-    st.subheader('There are 2 summarisers which you can choose from in the sidebar on the left: NeuSummaDev and BertSummaDev.')
-    text = st.text_area('Please enter your text below. Note that it takes a few seconds to generate the summary of your content.')
+    st.subheader('This was built in the context of a master thesis, in sponsorship with the AFD')
+    text = st.text_area('Please enter your text below.')
 
     if st.button('Summarise'):
         result_summary = BertSummaDev(text)

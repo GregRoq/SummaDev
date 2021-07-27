@@ -131,7 +131,7 @@ def BertSummaDev(text):
 def main():
     #Setting the layout 
     st.title ('Welcome to SummaDev, a summarising interface for development papers.')
-    st.subheader('This was built in the context of a master thesis, in sponsorship with the AFD')
+    st.subheader('This was built in the context of a master thesis.')
     text = st.text_area('Please enter your text below.')
 
     if st.button('Summarise'):
